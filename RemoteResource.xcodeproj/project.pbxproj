@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C94AEC6D16FA90F4003E5FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */; };
+		C94AEC7216FA90F4003E5FD6 /* RemoteResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */; };
+		C94AEC7416FA90F4003E5FD6 /* RemoteResource.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */; };
+		C94AEC7C16FA90F5003E5FD6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC7B16FA90F5003E5FD6 /* SenTestingKit.framework */; };
+		C94AEC7E16FA90F5003E5FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC7D16FA90F5003E5FD6 /* UIKit.framework */; };
+		C94AEC7F16FA90F5003E5FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */; };
+		C94AEC8216FA90F5003E5FD6 /* libRemoteResource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */; };
+		C94AEC8816FA90F5003E5FD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */; };
+		C94AEC8B16FA90F5003E5FD6 /* RemoteResourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C94AEC8016FA90F5003E5FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C94AEC6116FA90F4003E5FD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C94AEC6816FA90F4003E5FD6;
+			remoteInfo = RemoteResource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C94AEC6716FA90F4003E5FD6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				C94AEC7216FA90F4003E5FD6 /* RemoteResource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRemoteResource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C94AEC7016FA90F4003E5FD6 /* RemoteResource-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoteResource-Prefix.pch"; sourceTree = "<group>"; };
+		C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteResource.h; sourceTree = "<group>"; };
+		C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteResource.m; sourceTree = "<group>"; };
+		C94AEC7A16FA90F5003E5FD6 /* RemoteResourceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteResourceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94AEC7B16FA90F5003E5FD6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C94AEC7D16FA90F5003E5FD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C94AEC8516FA90F5003E5FD6 /* RemoteResourceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemoteResourceTests-Info.plist"; sourceTree = "<group>"; };
+		C94AEC8716FA90F5003E5FD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C94AEC8916FA90F5003E5FD6 /* RemoteResourceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteResourceTests.h; sourceTree = "<group>"; };
+		C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteResourceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C94AEC6616FA90F4003E5FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94AEC6D16FA90F4003E5FD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C94AEC7616FA90F5003E5FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94AEC7C16FA90F5003E5FD6 /* SenTestingKit.framework in Frameworks */,
+				C94AEC7E16FA90F5003E5FD6 /* UIKit.framework in Frameworks */,
+				C94AEC7F16FA90F5003E5FD6 /* Foundation.framework in Frameworks */,
+				C94AEC8216FA90F5003E5FD6 /* libRemoteResource.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C94AEC6016FA90F4003E5FD6 = {
+			isa = PBXGroup;
+			children = (
+				C94AEC6E16FA90F4003E5FD6 /* RemoteResource */,
+				C94AEC8316FA90F5003E5FD6 /* RemoteResourceTests */,
+				C94AEC6B16FA90F4003E5FD6 /* Frameworks */,
+				C94AEC6A16FA90F4003E5FD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C94AEC6A16FA90F4003E5FD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */,
+				C94AEC7A16FA90F5003E5FD6 /* RemoteResourceTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C94AEC6B16FA90F4003E5FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */,
+				C94AEC7B16FA90F5003E5FD6 /* SenTestingKit.framework */,
+				C94AEC7D16FA90F5003E5FD6 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C94AEC6E16FA90F4003E5FD6 /* RemoteResource */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */,
+				C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */,
+				C94AEC6F16FA90F4003E5FD6 /* Supporting Files */,
+			);
+			path = RemoteResource;
+			sourceTree = "<group>";
+		};
+		C94AEC6F16FA90F4003E5FD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC7016FA90F4003E5FD6 /* RemoteResource-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C94AEC8316FA90F5003E5FD6 /* RemoteResourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC8916FA90F5003E5FD6 /* RemoteResourceTests.h */,
+				C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */,
+				C94AEC8416FA90F5003E5FD6 /* Supporting Files */,
+			);
+			path = RemoteResourceTests;
+			sourceTree = "<group>";
+		};
+		C94AEC8416FA90F5003E5FD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C94AEC8516FA90F5003E5FD6 /* RemoteResourceTests-Info.plist */,
+				C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C94AEC6816FA90F4003E5FD6 /* RemoteResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94AEC8E16FA90F5003E5FD6 /* Build configuration list for PBXNativeTarget "RemoteResource" */;
+			buildPhases = (
+				C94AEC6516FA90F4003E5FD6 /* Sources */,
+				C94AEC6616FA90F4003E5FD6 /* Frameworks */,
+				C94AEC6716FA90F4003E5FD6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteResource;
+			productName = RemoteResource;
+			productReference = C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C94AEC7916FA90F5003E5FD6 /* RemoteResourceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94AEC9116FA90F5003E5FD6 /* Build configuration list for PBXNativeTarget "RemoteResourceTests" */;
+			buildPhases = (
+				C94AEC7516FA90F5003E5FD6 /* Sources */,
+				C94AEC7616FA90F5003E5FD6 /* Frameworks */,
+				C94AEC7716FA90F5003E5FD6 /* Resources */,
+				C94AEC7816FA90F5003E5FD6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C94AEC8116FA90F5003E5FD6 /* PBXTargetDependency */,
+			);
+			name = RemoteResourceTests;
+			productName = RemoteResourceTests;
+			productReference = C94AEC7A16FA90F5003E5FD6 /* RemoteResourceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C94AEC6116FA90F4003E5FD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Mateusz Stankiewicz";
+			};
+			buildConfigurationList = C94AEC6416FA90F4003E5FD6 /* Build configuration list for PBXProject "RemoteResource" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C94AEC6016FA90F4003E5FD6;
+			productRefGroup = C94AEC6A16FA90F4003E5FD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C94AEC6816FA90F4003E5FD6 /* RemoteResource */,
+				C94AEC7916FA90F5003E5FD6 /* RemoteResourceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C94AEC7716FA90F5003E5FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94AEC8816FA90F5003E5FD6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C94AEC7816FA90F5003E5FD6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C94AEC6516FA90F4003E5FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94AEC7416FA90F4003E5FD6 /* RemoteResource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C94AEC7516FA90F5003E5FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94AEC8B16FA90F5003E5FD6 /* RemoteResourceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C94AEC8116FA90F5003E5FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C94AEC6816FA90F4003E5FD6 /* RemoteResource */;
+			targetProxy = C94AEC8016FA90F5003E5FD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C94AEC8716FA90F5003E5FD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C94AEC8C16FA90F5003E5FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C94AEC8D16FA90F5003E5FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C94AEC8F16FA90F5003E5FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RemoteResource.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteResource/RemoteResource-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C94AEC9016FA90F5003E5FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RemoteResource.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteResource/RemoteResource-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C94AEC9216FA90F5003E5FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteResource/RemoteResource-Prefix.pch";
+				INFOPLIST_FILE = "RemoteResourceTests/RemoteResourceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C94AEC9316FA90F5003E5FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteResource/RemoteResource-Prefix.pch";
+				INFOPLIST_FILE = "RemoteResourceTests/RemoteResourceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C94AEC6416FA90F4003E5FD6 /* Build configuration list for PBXProject "RemoteResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94AEC8C16FA90F5003E5FD6 /* Debug */,
+				C94AEC8D16FA90F5003E5FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C94AEC8E16FA90F5003E5FD6 /* Build configuration list for PBXNativeTarget "RemoteResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94AEC8F16FA90F5003E5FD6 /* Debug */,
+				C94AEC9016FA90F5003E5FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C94AEC9116FA90F5003E5FD6 /* Build configuration list for PBXNativeTarget "RemoteResourceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94AEC9216FA90F5003E5FD6 /* Debug */,
+				C94AEC9316FA90F5003E5FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C94AEC6116FA90F4003E5FD6 /* Project object */;
+}

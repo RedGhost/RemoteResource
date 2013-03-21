@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RemoteResource' target in the 'RemoteResource' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
