@@ -10,4 +10,29 @@
 
 @implementation RemoteResource
 
+- (id)initWithIdentifier:(id)identifier andData:(NSDictionary*)data {
+    if(self = [super init]) {
+        _identifier = identifier;
+        _data = data;
+        _updatedData = [[NSMutableDictionary alloc] initWithCapacity:[_data count]];
+    }
+    return self;
+}
+
++ (void) fetch:(id)identifier completionHandler:(FetchResponseHandler)handler {
+    
+}
+
++ (RemoteResource*) fetch:(id)identifier withError:(NSError**)error {
+    
+}
+
+- (void) saveWithCompletionHandler:(SaveResponseHandler)handler {
+    
+}
+
+- (BOOL) saveWithError:(NSError**)error {
+    
+}
+
 @end

@@ -16,6 +16,8 @@
 		C94AEC8216FA90F5003E5FD6 /* libRemoteResource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */; };
 		C94AEC8816FA90F5003E5FD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */; };
 		C94AEC8B16FA90F5003E5FD6 /* RemoteResourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */; };
+		C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DC716FA966700434840 /* RRAuthenticator.m */; };
+		C99D6DCB16FA9C5E00434840 /* RemoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCA16FA9C5E00434840 /* RemoteService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		C94AEC8716FA90F5003E5FD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C94AEC8916FA90F5003E5FD6 /* RemoteResourceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteResourceTests.h; sourceTree = "<group>"; };
 		C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteResourceTests.m; sourceTree = "<group>"; };
+		C99D6DC616FA966700434840 /* RRAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRAuthenticator.h; sourceTree = "<group>"; };
+		C99D6DC716FA966700434840 /* RRAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRAuthenticator.m; sourceTree = "<group>"; };
+		C99D6DC916FA9C5E00434840 /* RemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteService.h; sourceTree = "<group>"; };
+		C99D6DCA16FA9C5E00434840 /* RemoteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +117,12 @@
 		C94AEC6E16FA90F4003E5FD6 /* RemoteResource */ = {
 			isa = PBXGroup;
 			children = (
+				C99D6DC916FA9C5E00434840 /* RemoteService.h */,
+				C99D6DCA16FA9C5E00434840 /* RemoteService.m */,
 				C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */,
 				C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */,
+				C99D6DC616FA966700434840 /* RRAuthenticator.h */,
+				C99D6DC716FA966700434840 /* RRAuthenticator.m */,
 				C94AEC6F16FA90F4003E5FD6 /* Supporting Files */,
 			);
 			path = RemoteResource;
@@ -244,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94AEC7416FA90F4003E5FD6 /* RemoteResource.m in Sources */,
+				C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */,
+				C99D6DCB16FA9C5E00434840 /* RemoteService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +415,7 @@
 				C94AEC9016FA90F5003E5FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C94AEC9116FA90F5003E5FD6 /* Build configuration list for PBXNativeTarget "RemoteResourceTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +424,7 @@
 				C94AEC9316FA90F5003E5FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
