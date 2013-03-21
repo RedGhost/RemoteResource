@@ -15,4 +15,9 @@
     @throw [NSException exceptionWithName:@"NotImplementedException" reason:reason userInfo:nil];
 }
 
+- (BOOL) isAuthenticated {
+    NSString * reason = [NSString stringWithFormat:@"%@::isAuthenticated not implemented.", [self class]];
+    @throw [NSException exceptionWithName:@"NotImplementedException" reason:reason userInfo:nil];
+}
+
 @end

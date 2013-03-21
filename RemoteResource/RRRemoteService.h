@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RRAuthenticator.h"
+#import "RRDataConverter.h"
 
-@interface RemoteService : NSObject
+@interface RRRemoteService : NSObject
+
+@property (assign, nonatomic) NSTimeInterval timeoutInterval;
+@property (strong, nonatomic) NSURL * endpointURL;
+@property (strong, nonatomic) RRAuthenticator * authenticator;
+@property (strong, nonatomic) RRDataConverter * converter;
 
 typedef enum {
     GET,
@@ -17,7 +24,9 @@ typedef enum {
     PUT
 } Method;
 
-+ (RemoteService*)instance;
++ (RRRemoteService*)instance;
+
+- (void)setEndpointURLWithString:(NSString*)string;
 
 typedef void (^ExecuteResponseHandler)(NSObject * resource, NSError * error);
 - (void) executeAsynchronousRequestWithMethod:(Method)method andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler;

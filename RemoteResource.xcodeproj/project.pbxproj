@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C94AEC6D16FA90F4003E5FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */; };
-		C94AEC7216FA90F4003E5FD6 /* RemoteResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */; };
-		C94AEC7416FA90F4003E5FD6 /* RemoteResource.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */; };
+		C94AEC7216FA90F4003E5FD6 /* RRRemoteResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C94AEC7116FA90F4003E5FD6 /* RRRemoteResource.h */; };
+		C94AEC7416FA90F4003E5FD6 /* RRRemoteResource.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC7316FA90F4003E5FD6 /* RRRemoteResource.m */; };
 		C94AEC7C16FA90F5003E5FD6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC7B16FA90F5003E5FD6 /* SenTestingKit.framework */; };
 		C94AEC7E16FA90F5003E5FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC7D16FA90F5003E5FD6 /* UIKit.framework */; };
 		C94AEC7F16FA90F5003E5FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */; };
@@ -17,7 +17,8 @@
 		C94AEC8816FA90F5003E5FD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */; };
 		C94AEC8B16FA90F5003E5FD6 /* RemoteResourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */; };
 		C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DC716FA966700434840 /* RRAuthenticator.m */; };
-		C99D6DCB16FA9C5E00434840 /* RemoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCA16FA9C5E00434840 /* RemoteService.m */; };
+		C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */; };
+		C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				C94AEC7216FA90F4003E5FD6 /* RemoteResource.h in CopyFiles */,
+				C94AEC7216FA90F4003E5FD6 /* RRRemoteResource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +48,8 @@
 		C94AEC6916FA90F4003E5FD6 /* libRemoteResource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRemoteResource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94AEC6C16FA90F4003E5FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C94AEC7016FA90F4003E5FD6 /* RemoteResource-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoteResource-Prefix.pch"; sourceTree = "<group>"; };
-		C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteResource.h; sourceTree = "<group>"; };
-		C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteResource.m; sourceTree = "<group>"; };
+		C94AEC7116FA90F4003E5FD6 /* RRRemoteResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRRemoteResource.h; sourceTree = "<group>"; };
+		C94AEC7316FA90F4003E5FD6 /* RRRemoteResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRRemoteResource.m; sourceTree = "<group>"; };
 		C94AEC7A16FA90F5003E5FD6 /* RemoteResourceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteResourceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94AEC7B16FA90F5003E5FD6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C94AEC7D16FA90F5003E5FD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,8 +59,10 @@
 		C94AEC8A16FA90F5003E5FD6 /* RemoteResourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteResourceTests.m; sourceTree = "<group>"; };
 		C99D6DC616FA966700434840 /* RRAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRAuthenticator.h; sourceTree = "<group>"; };
 		C99D6DC716FA966700434840 /* RRAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRAuthenticator.m; sourceTree = "<group>"; };
-		C99D6DC916FA9C5E00434840 /* RemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteService.h; sourceTree = "<group>"; };
-		C99D6DCA16FA9C5E00434840 /* RemoteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteService.m; sourceTree = "<group>"; };
+		C99D6DC916FA9C5E00434840 /* RRRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRRemoteService.h; sourceTree = "<group>"; };
+		C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRRemoteService.m; sourceTree = "<group>"; };
+		C99D6DCC16FAA3BB00434840 /* RRDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRDataConverter.h; sourceTree = "<group>"; };
+		C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRDataConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +120,12 @@
 		C94AEC6E16FA90F4003E5FD6 /* RemoteResource */ = {
 			isa = PBXGroup;
 			children = (
-				C99D6DC916FA9C5E00434840 /* RemoteService.h */,
-				C99D6DCA16FA9C5E00434840 /* RemoteService.m */,
-				C94AEC7116FA90F4003E5FD6 /* RemoteResource.h */,
-				C94AEC7316FA90F4003E5FD6 /* RemoteResource.m */,
-				C99D6DC616FA966700434840 /* RRAuthenticator.h */,
-				C99D6DC716FA966700434840 /* RRAuthenticator.m */,
+				C99D6DD016FAA52600434840 /* Authenticators */,
+				C99D6DCF16FAA51A00434840 /* Converters */,
+				C99D6DC916FA9C5E00434840 /* RRRemoteService.h */,
+				C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */,
+				C94AEC7116FA90F4003E5FD6 /* RRRemoteResource.h */,
+				C94AEC7316FA90F4003E5FD6 /* RRRemoteResource.m */,
 				C94AEC6F16FA90F4003E5FD6 /* Supporting Files */,
 			);
 			path = RemoteResource;
@@ -153,6 +156,24 @@
 				C94AEC8616FA90F5003E5FD6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C99D6DCF16FAA51A00434840 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				C99D6DCC16FAA3BB00434840 /* RRDataConverter.h */,
+				C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */,
+			);
+			name = Converters;
+			sourceTree = "<group>";
+		};
+		C99D6DD016FAA52600434840 /* Authenticators */ = {
+			isa = PBXGroup;
+			children = (
+				C99D6DC616FA966700434840 /* RRAuthenticator.h */,
+				C99D6DC716FA966700434840 /* RRAuthenticator.m */,
+			);
+			name = Authenticators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,9 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94AEC7416FA90F4003E5FD6 /* RemoteResource.m in Sources */,
+				C94AEC7416FA90F4003E5FD6 /* RRRemoteResource.m in Sources */,
 				C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */,
-				C99D6DCB16FA9C5E00434840 /* RemoteService.m in Sources */,
+				C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */,
+				C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

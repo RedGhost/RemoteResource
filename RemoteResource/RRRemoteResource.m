@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Mateusz Stankiewicz. All rights reserved.
 //
 
-#import "RemoteResource.h"
+#import "RRRemoteResource.h"
 
-@implementation RemoteResource
+@implementation RRRemoteResource
 
 - (id)initWithIdentifier:(id)identifier andData:(NSDictionary*)data {
     if(self = [super init]) {
@@ -23,7 +23,7 @@
     
 }
 
-+ (RemoteResource*) fetch:(id)identifier withError:(NSError**)error {
++ (RRRemoteResource*) fetch:(id)identifier withError:(NSError**)error {
     
 }
 

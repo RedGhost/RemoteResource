@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RemoteResource : NSObject
+@interface RRRemoteResource : NSObject
 
 @property (strong, nonatomic) id identifier;
 @property (strong, nonatomic) NSDictionary * data;
@@ -18,7 +18,7 @@
 
 typedef void (^FetchResponseHandler)(id resource, NSError * error);
 + (void) fetch:(id)identifier completionHandler:(FetchResponseHandler)handler;
-+ (RemoteResource*) fetch:(id)identifier withError:(NSError**)error;
++ (RRRemoteResource*) fetch:(id)identifier withError:(NSError**)error;
 
 typedef void (^SaveResponseHandler)(BOOL success, NSError * error);
 - (void) saveWithCompletionHandler:(SaveResponseHandler)handler;

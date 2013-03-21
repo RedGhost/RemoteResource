@@ -1,5 +1,5 @@
 //
-//  RRAuthenticator.h
+//  RRDataCoder.h
 //  RemoteResource
 //
 //  Created by Mateusz Stankiewicz on 3/20/13.
@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RRAuthenticator : NSObject
+@interface RRDataConverter : NSObject
 
-- (void) addAuthenticationToRequest:(NSMutableURLRequest*)request;
-- (BOOL) isAuthenticated;
+- (NSString*) contentType;
+- (NSObject*) objectFromData:(NSData*)data;
+- (NSData*) dataFromObject:(NSObject*)object;
 
 @end
