@@ -40,7 +40,35 @@ SampleResource.m:
 }
 ```
 
-Here is how you would use it:
+Note that the call against your webservice has to return a json object with all of  the properties defined above. So for the SampleResource your JSON response from the webservice would look at the bare minimum like this:
+```json
+{
+    "firstName" : "Red",
+    "lastName"  : "Ghost",
+    "age"       : 22
+}
+```
+
+It could have additional properties such as this:
+```json
+{
+    "firstName"     : "Red",
+    "middleInitial" : "k",
+    "lastName"      : "Ghost",
+    "age"           : 22,
+    "address"       : "somewhere"
+}
+```
+
+You could even access and set them like this:
+```objc
+NSString * address = [SampleResource valueForKey:@"address"];
+[SampleResource setValue:@"value" forKey:@"address"];
+```
+
+Obviously, it's easier and much more readable if you define the property within your resource object.
+
+Here is how you would use the SampleResource:
 ```objc
 #import "SampleResource.h"
 
