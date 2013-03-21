@@ -20,6 +20,7 @@
 		C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */; };
 		C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */; };
 		C99D6DD416FAAC5200434840 /* NSDictionary+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DD316FAAC5200434840 /* NSDictionary+Merge.m */; };
+		C99D6DD716FAB1DD00434840 /* RRJSONDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DD616FAB1DD00434840 /* RRJSONDataConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRDataConverter.m; sourceTree = "<group>"; };
 		C99D6DD216FAAC5200434840 /* NSDictionary+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Merge.h"; sourceTree = "<group>"; };
 		C99D6DD316FAAC5200434840 /* NSDictionary+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Merge.m"; sourceTree = "<group>"; };
+		C99D6DD516FAB1DD00434840 /* RRJSONDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRJSONDataConverter.h; sourceTree = "<group>"; };
+		C99D6DD616FAB1DD00434840 /* RRJSONDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRJSONDataConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 			children = (
 				C99D6DCC16FAA3BB00434840 /* RRDataConverter.h */,
 				C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */,
+				C99D6DD516FAB1DD00434840 /* RRJSONDataConverter.h */,
+				C99D6DD616FAB1DD00434840 /* RRJSONDataConverter.m */,
 			);
 			name = Converters;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */,
 				C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */,
 				C99D6DD416FAAC5200434840 /* NSDictionary+Merge.m in Sources */,
+				C99D6DD716FAB1DD00434840 /* RRJSONDataConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

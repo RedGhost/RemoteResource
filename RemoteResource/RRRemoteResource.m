@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Mateusz Stankiewicz. All rights reserved.
 //
 
+#include <objc/runtime.h>
+
 #import "RRRemoteResource.h"
 #import "RRRemoteService.h"
 
@@ -16,6 +18,12 @@
         _identifier = identifier;
         _data = data;
         _updatedData = [[NSMutableDictionary alloc] initWithCapacity:[_data count]];
+        for(NSString * key in [data allKeys]) {
+            SEL setter = NSSelectorFromString([NSString stringWithFormat:@"set%@:",[key capitalizedString]]);
+            SEL getter = NSSelectorFromString([NSString stringWithFormat:@"%@", key]);
+            class_addMethod([self class], setter, (IMP)setPropertyIMP, "v@:@");
+            class_addMethod([self class], getter, (IMP)propertyIMP, "@@:");
+        }
     }
     return self;
 }
@@ -63,7 +71,7 @@
                 handler(YES, nil);
             }
             else {
-                handler(nil, error);
+                handler(NO, error);
             }
         }
     }];
@@ -75,6 +83,53 @@
     }
     
     return ([[RRRemoteService instance] executeSynchronousRequestWithMethod:POST andPath:[[self class] pathForIdentifier:_identifier] andParameters:[_data dictionaryByMergingWith:_updatedData] andError:error] != nil);
+}
+
+- (id)valueForKey:(NSString *)key {
+    NSParameterAssert(key);
+    
+    id object = [_updatedData objectForKey:key];
+    if(object == nil) {
+        object = [_data objectForKey:key];
+        if(object == nil) {
+            return [self valueForUndefinedKey:key];
+        }
+    }
+
+    return object;
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key {
+    NSParameterAssert(key);
+    
+    id object = [_data objectForKey:key];
+    if(object == nil) {
+        return [self setValue:value forUndefinedKey:key];
+    }
+    
+    if(![object isEqual:value]) {
+        [_updatedData setObject:value forKey:key];
+    }
+}
+
+// generic getter
+static id propertyIMP(id self, SEL _cmd) {
+    return [self valueForKey:NSStringFromSelector(_cmd)];
+}
+
+
+// generic setter
+static void setPropertyIMP(id self, SEL _cmd, id aValue) {
+    id value = [aValue copy];
+    NSMutableString *key = [NSStringFromSelector(_cmd) mutableCopy];
+    
+    // delete "set" and ":" and lowercase first letter
+    [key deleteCharactersInRange:NSMakeRange(0, 3)];
+    [key deleteCharactersInRange:NSMakeRange([key length] - 1, 1)];
+    NSString *firstChar = [key substringToIndex:1];
+    [key replaceCharactersInRange:NSMakeRange(0, 1) withString:[firstChar lowercaseString]];
+    
+    [self setValue:value forKey:key];
 }
 
 @end

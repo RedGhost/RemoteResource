@@ -1,5 +1,5 @@
 //
-//  RRDataCoder.h
+//  RRDataConverter.h
 //  RemoteResource
 //
 //  Created by Mateusz Stankiewicz on 3/20/13.
@@ -11,7 +11,7 @@
 @interface RRDataConverter : NSObject
 
 - (NSString*) contentType;
-- (NSObject*) objectFromData:(NSData*)data;
-- (NSData*) dataFromObject:(NSObject*)object;
+- (NSObject*) objectFromData:(NSData*)data withError:(NSError**)error;
+- (NSData*) dataFromObject:(NSObject*)object withError:(NSError**)error;
 
 @end

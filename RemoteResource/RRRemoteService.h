@@ -22,14 +22,14 @@ typedef enum {
     POST,
     DELETE,
     PUT
-} Method;
+} HTTPMethod;
 
 + (RRRemoteService*)instance;
 
 - (void)setEndpointURLWithString:(NSString*)string;
 
 typedef void (^ExecuteResponseHandler)(NSObject * resource, NSError * error);
-- (void) executeAsynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler;
-- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error;
+- (void) executeAsynchronousRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler;
+- (NSObject*) executeSynchronousRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error;
 
 @end

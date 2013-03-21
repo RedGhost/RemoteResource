@@ -1,5 +1,5 @@
 //
-//  RRDataCoder.m
+//  RRDataConverter.m
 //  RemoteResource
 //
 //  Created by Mateusz Stankiewicz on 3/20/13.
@@ -15,12 +15,12 @@
     @throw [NSException exceptionWithName:@"NotImplementedException" reason:reason userInfo:nil];
 }
 
-- (NSObject*) objectFromData:(NSData*)data {
+- (NSObject*) objectFromData:(NSData*)data withError:(NSError**)error {
     NSString * reason = [NSString stringWithFormat:@"%@::objectFromData: not implemented.", [self class]];
     @throw [NSException exceptionWithName:@"NotImplementedException" reason:reason userInfo:nil];
 }
 
-- (NSData*) dataFromObject:(NSObject*)object {
+- (NSData*) dataFromObject:(NSObject*)object withError:(NSError**)error {
     NSString * reason = [NSString stringWithFormat:@"%@::dataFromObject: not implemented.", [self class]];
     @throw [NSException exceptionWithName:@"NotImplementedException" reason:reason userInfo:nil];
 }

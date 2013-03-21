@@ -14,7 +14,7 @@ static RRRemoteService * instance;
 
 @property (strong, nonatomic) NSOperationQueue * queue;
 
-- (NSURLRequest*)createRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params;
+- (NSURLRequest*)createRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error;
 
 @end
 
@@ -43,7 +43,7 @@ static RRRemoteService * instance;
     _endpointURL = [NSURL URLWithString:string];
 }
 
-- (NSURLRequest*)createRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params {
+- (NSURLRequest*)createRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError **)error {
     NSParameterAssert(_endpointURL);
     NSParameterAssert(_converter);
     
@@ -70,7 +70,11 @@ static RRRemoteService * instance;
     
     if(params != nil) {
         [request addValue:[_converter contentType] forHTTPHeaderField:@"Content-Type"];
-        [request setHTTPBody:[_converter dataFromObject:params]];
+        NSData * data = [_converter dataFromObject:params withError:error];
+        if(data == nil) {
+            return nil;
+        }
+        [request setHTTPBody:data];
     }
     
     if(_authenticator != nil && [_authenticator isAuthenticated]) {
@@ -80,29 +84,46 @@ static RRRemoteService * instance;
     return request;
 }
 
-- (void) executeAsynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler {
+- (void) executeAsynchronousRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler {
     NSParameterAssert(handler);
     
-    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params];
+    NSError * error;
+    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params andError:&error];
+    
+    if(request == nil) {
+        handler(nil, error);
+        return;
+    }
     
     [NSURLConnection sendAsynchronousRequest:request queue:_queue completionHandler:^(NSURLResponse * response, NSData * data, NSError * error) {
         if(data == nil) {
             handler(nil, error);
         }
         else {
-            handler([_converter objectFromData:data], nil);
+            NSError * error;
+            NSObject * object = [_converter objectFromData:data withError:&error];
+            if(object == nil) {
+                handler(nil, error);
+            }
+            else {
+                handler(object, nil);
+            }
         }
     }];
 }
 
-- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error {
-    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params];
+- (NSObject*) executeSynchronousRequestWithMethod:(HTTPMethod)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error {
+    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params andError:error];
+    if(request == nil) {
+        return nil;
+    }
+    
     NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:error];
     if(data == nil) {
         return nil;
     }
     else {
-        return [_converter objectFromData:data];
+        return [_converter objectFromData:data withError:error];
     }
 }
 
