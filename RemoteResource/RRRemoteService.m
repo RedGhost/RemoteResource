@@ -14,7 +14,7 @@ static RRRemoteService * instance;
 
 @property (strong, nonatomic) NSOperationQueue * queue;
 
-- (NSURLRequest*)createRequestWithMethod:(Method)method andParameters:(NSDictionary*)params;
+- (NSURLRequest*)createRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params;
 
 @end
 
@@ -43,11 +43,12 @@ static RRRemoteService * instance;
     _endpointURL = [NSURL URLWithString:string];
 }
 
-- (NSURLRequest*)createRequestWithMethod:(Method)method andParameters:(NSDictionary*)params {
+- (NSURLRequest*)createRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params {
     NSParameterAssert(_endpointURL);
     NSParameterAssert(_converter);
     
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:_endpointURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:_timeoutInterval];
+    NSURL * url = (path != nil) ? [_endpointURL URLByAppendingPathComponent:path] : _endpointURL;
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:_timeoutInterval];
     
     switch (method) {
         case GET:
@@ -79,10 +80,10 @@ static RRRemoteService * instance;
     return request;
 }
 
-- (void) executeAsynchronousRequestWithMethod:(Method)method andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler {
+- (void) executeAsynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler {
     NSParameterAssert(handler);
     
-    NSURLRequest * request = [self createRequestWithMethod:method andParameters:params];
+    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params];
     
     [NSURLConnection sendAsynchronousRequest:request queue:_queue completionHandler:^(NSURLResponse * response, NSData * data, NSError * error) {
         if(data == nil) {
@@ -94,8 +95,8 @@ static RRRemoteService * instance;
     }];
 }
 
-- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andParameters:(NSDictionary*)params andError:(NSError**)error {
-    NSURLRequest * request = [self createRequestWithMethod:method andParameters:params];
+- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error {
+    NSURLRequest * request = [self createRequestWithMethod:method andPath:path andParameters:params];
     NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:error];
     if(data == nil) {
         return nil;

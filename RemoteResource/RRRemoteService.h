@@ -29,7 +29,7 @@ typedef enum {
 - (void)setEndpointURLWithString:(NSString*)string;
 
 typedef void (^ExecuteResponseHandler)(NSObject * resource, NSError * error);
-- (void) executeAsynchronousRequestWithMethod:(Method)method andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler;
-- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andParameters:(NSDictionary*)params andError:(NSError**)error;
+- (void) executeAsynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params completionHandler:(ExecuteResponseHandler)handler;
+- (NSObject*) executeSynchronousRequestWithMethod:(Method)method andPath:(NSString*)path andParameters:(NSDictionary*)params andError:(NSError**)error;
 
 @end

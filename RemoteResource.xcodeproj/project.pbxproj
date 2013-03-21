@@ -19,6 +19,7 @@
 		C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DC716FA966700434840 /* RRAuthenticator.m */; };
 		C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */; };
 		C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */; };
+		C99D6DD416FAAC5200434840 /* NSDictionary+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = C99D6DD316FAAC5200434840 /* NSDictionary+Merge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		C99D6DCA16FA9C5E00434840 /* RRRemoteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRRemoteService.m; sourceTree = "<group>"; };
 		C99D6DCC16FAA3BB00434840 /* RRDataConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRDataConverter.h; sourceTree = "<group>"; };
 		C99D6DCD16FAA3BB00434840 /* RRDataConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRDataConverter.m; sourceTree = "<group>"; };
+		C99D6DD216FAAC5200434840 /* NSDictionary+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Merge.h"; sourceTree = "<group>"; };
+		C99D6DD316FAAC5200434840 /* NSDictionary+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Merge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 		C94AEC6E16FA90F4003E5FD6 /* RemoteResource */ = {
 			isa = PBXGroup;
 			children = (
+				C99D6DD116FAAC3A00434840 /* Categories */,
 				C99D6DD016FAA52600434840 /* Authenticators */,
 				C99D6DCF16FAA51A00434840 /* Converters */,
 				C99D6DC916FA9C5E00434840 /* RRRemoteService.h */,
@@ -174,6 +178,15 @@
 				C99D6DC716FA966700434840 /* RRAuthenticator.m */,
 			);
 			name = Authenticators;
+			sourceTree = "<group>";
+		};
+		C99D6DD116FAAC3A00434840 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C99D6DD216FAAC5200434840 /* NSDictionary+Merge.h */,
+				C99D6DD316FAAC5200434840 /* NSDictionary+Merge.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +291,7 @@
 				C99D6DC816FA966700434840 /* RRAuthenticator.m in Sources */,
 				C99D6DCB16FA9C5E00434840 /* RRRemoteService.m in Sources */,
 				C99D6DCE16FAA3BB00434840 /* RRDataConverter.m in Sources */,
+				C99D6DD416FAAC5200434840 /* NSDictionary+Merge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

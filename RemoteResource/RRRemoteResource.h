@@ -16,9 +16,11 @@
 
 - (id)initWithIdentifier:(id)identifier andData:(NSDictionary*)data;
 
++ (NSString*)pathForIdentifier:(id)identifier;
+
 typedef void (^FetchResponseHandler)(id resource, NSError * error);
 + (void) fetch:(id)identifier completionHandler:(FetchResponseHandler)handler;
-+ (RRRemoteResource*) fetch:(id)identifier withError:(NSError**)error;
++ (id) fetch:(id)identifier withError:(NSError**)error;
 
 typedef void (^SaveResponseHandler)(BOOL success, NSError * error);
 - (void) saveWithCompletionHandler:(SaveResponseHandler)handler;
