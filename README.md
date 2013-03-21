@@ -62,8 +62,9 @@ It could have additional properties such as this:
 
 You could even access and set them like this:
 ```objc
-NSString * address = [SampleResource valueForKey:@"address"];
-[SampleResource setValue:@"value" forKey:@"address"];
+SampleResource * resource = [SampleResource fetch: ...];
+NSString * address = [resource valueForKey:@"address"];
+[resource setValue:@"value" forKey:@"address"];
 ```
 
 Obviously, it's easier and much more readable if you define the property within your resource object.
